@@ -1,0 +1,173 @@
+.App {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.App-header {
+
+  margin-bottom: 2rem;
+}
+
+.App-header h1 {
+  font-size: 36px;
+  font-weight: normal;
+  font-style: OpenSans-Light;
+  color: #444444;
+  padding: 22px 0;
+}
+
+.Add-tasks {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.input-tasks {
+  width: 70%;
+  position: relative;
+}
+
+.input-tasks input {
+  height: 35px;
+  padding: 6px;
+  padding-left: 24px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #dad7d7;
+}
+
+.input-tasks input::placeholder {
+  color: #0082d4;
+}
+
+.placeholder-icon {
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
+
+.placeholder-icon::before {
+  content: url('../images/add-blue.svg');
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  transform: translate(5px, 7px);
+}
+
+.input-tasks input:focus+.placeholder-icon::before {
+  content: url('../images/add-gray.svg');
+}
+
+.input-tasks input:focus::placeholder {
+  color: #b9bcc0;
+}
+
+.input-bar-error {
+  border: 1px solid #c22a22 !important;
+}
+
+.error-message-container {
+  position: absolute;
+  bottom: -20px;
+}
+
+.error-message-container p {
+  color: #c22a22;
+  font-size: 14px;
+}
+
+.Add-tasks button {
+  width: 14%;
+  color: #fff;
+  background-color: #0082d4;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-disable {
+  opacity: 0.5;
+  cursor: default !important;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-list {
+  width: 50%;
+}
+
+.task-list h3 {
+  font-size: 20px;
+  font-weight: normal;
+  color: #889da7;
+  margin-bottom: 1rem;
+}
+
+
+.todo-item {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  width: 90%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.todo-item button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.todo-task {
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+}
+
+.todo-task::before {
+  content: url('../images/not-checked.svg');
+  margin-right: 8px;
+  transform: translate(0px, 4px);
+  display: inline-block;
+}
+
+.completed-task {
+  text-decoration: line-through;
+}
+
+.completed-task::before {
+  content: url('../images/checked.svg');
+  margin-right: 8px;
+  transform: translate(0px, 4px);
+  display: inline-block;
+}
+
+.reorder-controls {
+  display: flex;
+  position: absolute;
+  right: 24px;
+  top: -2px;
+  width: 28px;
+  justify-content: space-between;
+  color: #0082d4;
+}
+
+.reorder-controls span {
+  cursor: pointer;
+}
+
+.delete-icon {
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 900px) {
+  .App {
+    width: 80%;
+  }
+}
